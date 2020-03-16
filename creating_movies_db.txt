@@ -1,0 +1,6 @@
+create database rzeczy_do_obejrzenia;
+
+create table filmy(id INT AUTO_INCREMENT, Tytul VARCHAR(50), Czyje VARCHAR(2), PRIMARY KEY(id));
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/filmy.txt' INTO TABLE filmy CHARACTER SET cp1250 COLUMNS TERMINATED BY '|' LINES TERMINATED BY '\r\n' (Tytul, Czyje);
+
+create table obejrzane(id INT , Tytul VARCHAR(50), Czyje VARCHAR(2));
